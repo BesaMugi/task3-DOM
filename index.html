@@ -1,0 +1,60 @@
+
+<html>
+<head>
+  <title>интукод</title>
+</head>
+<body>
+  <div id="main">
+      <ul id="list">
+          <li>html</li>
+          <li>css</li>
+      </ul>
+  </div>
+    <div id="copyright">(c) INTOCODE</div>
+
+    <script>
+        const addText = (text) => {
+        const body = document.body;
+        const h1 = document.createElement('h1');
+        h1.textContent = text;
+        document.body.prepend(h1);
+        };
+        addText("Работа с DOM");
+
+        const addLink = (link) => {
+            const body = document.body;
+            const a = document.createElement('a');
+            a.href = link;
+            a.textContent = 'DOM';
+            const main = document.getElementById('main');
+            main.appendChild(a);
+        };
+        addLink("https://paper.dropbox.com/doc/DOM-KrSbmrOQHo09BZwgsOmhp");
+
+        const addColor = (color) => {
+            const body = document.body;
+            body.style.background = color;
+        };
+        addColor("red")
+        
+        const addList = (text) => {
+            const list = document.getElementById('list');
+            const li = document.createElement('li');
+            li.textContent = text;
+            list.appendChild(li);
+        };
+        addList('Текст переданный в функцию')
+
+        const deleteId = () => {
+            const body = document.body;
+            const copyRight = document.getElementById('copyright');
+            body.removeChild(copyRight)
+        }
+        deleteId()
+
+        // 'https://paper.dropbox.com/doc/DOM-KrSbmrOQHo09BZwgsOmhp'
+        // document.body.style.background = 'black';
+        // document.body.style.color = 'white';
+        </script>
+</body>
+</html>
